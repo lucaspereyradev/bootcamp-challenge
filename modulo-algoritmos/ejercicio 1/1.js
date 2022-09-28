@@ -11,8 +11,8 @@ for (let i = 2; i < numeroPrimo; i++) {   // bucle FOR para verificar si su divi
     }
 }
 
-if(esNumeroPrimo){
-    document.write('El numero ', numeroPrimo, ' es un numero primo');
+if(esNumeroPrimo){ // if para saber si es primo o no
+    document.write('El numero ', numeroPrimo, ' es un numero primo'); 
 }else  {
     document.write('El numero ', numeroPrimo, ' no es un numero primo');
 }

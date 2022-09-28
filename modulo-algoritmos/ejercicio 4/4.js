@@ -11,10 +11,10 @@ function getNumAleatorio(min, max) { // Funcion para calcular numero aleatorio
 let num = getNumAleatorio(0, 1000); // variable que almacena el numero aleatorio entre 0 y 1000
 
 while (true) { // while para comenzar el juego
-    userNum = prompt("Ingresa tu numero");
+    userNum = prompt("Ingresa tu numero"); // digitar el numero
     if (userNum == num) {
         alert("Ganaste!");
-        break;
+        break; // si el usuario acierta se rompe el ciclo
     } else if (userNum > num) {
         alert("El numero a adivinar es menor");
     } else if (userNum < num) {

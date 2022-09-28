@@ -6,27 +6,31 @@
 // c. – suma de todos los números
 // d. – suma de los números
 
-var nums = [];
-let suma = 0;
+var nums = []; // array para almacenar los numeros
 
-while(true) {
+while(true) { // bucle para almacenar numeros
     let userNum = prompt("Ingresa un numero");
     nums.push(userNum);
     
     if (userNum == "-1") {
         nums.pop();
-        break;
+        break; // cuando el usuario ingrese -1 se rompera el ciclo
     }
 }
 
-let maxNum = Math.max.apply(null, nums);
-let minNum = Math.min.apply(null, nums);
+let maxNum = Math.max.apply(null, nums); // calcular numero mas alto
+let minNum = Math.min.apply(null, nums); // calcular numero mas bajo
 
-for (let i = 0; i < nums.length; i++) {
-    suma += nums[i];
+function sumarEnteros(nums) { // funcion para sumar los numeros
+    let suma = 0; // variable que almacena la suma de los numeros
+    for (let i in nums) { // bucle para la suma del array
+        if (Array.isArray(nums[i])) suma += nums[i]; // si es un array lo va a sumar
+        else suma += nums[i];
+    }
+    return suma;
 }
 
 document.write("El numero mas alto es: ", maxNum, "<br>",
                "El numero mas bajo es: ", minNum, "<br>", 
-               "La suma total es: ", suma, "<br>",
+               "La suma total es: ", sumarEnteros(nums), "<br>",
                "La cantidad de numeros escritos es de: ", nums.length);

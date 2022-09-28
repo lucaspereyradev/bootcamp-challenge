@@ -5,18 +5,18 @@
 // ejercitar la memoria”. Los mensajes quedarán en pantalla a la espera que el usuario
 // presione una tecla, luego de esto se cerrará el programa.
 
-let contrasena = prompt("Escribe la contraseña");
-let intentos = 3;
+let contrasena = prompt("Escribe la contraseña"); // Digitar contraseña
+let intentos = 3; // numero de intentos disponibles
 
-for (let i = 0; i < 3; i++) {
-    let intento = prompt("Repite la contraseña");
-    if (contrasena === intento) {
+for (let i = 0; i < 3; i++) {   
+    let intento = prompt("Repite la contraseña");   // pide que repitas la contraseña para comenzar el condicional
+    if (contrasena === intento) { 
         alert("Felicitaciones, recordás tu contraseña");
-        break;
+        break;  // Si la contraseña es correcta se rompera el bucle
     }
     else {
-        intentos--
-        if(intentos === 0){
+        intentos-- // cada ves que sea incorrecta se restara 1 vida
+        if(intentos === 0){ // cuando llega a 0 intentos mostrara esta alerta
             alert("Tenes que ejercitar la memoria");
         }
     }

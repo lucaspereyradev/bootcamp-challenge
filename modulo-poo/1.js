@@ -30,7 +30,7 @@ let newPassword = new Password(8);
 function generatePasswordRand(newPassword) {
     var str =
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
-        "abcdefghijklmnopqrstuvwxyz0123456789@#$";
+        "abcdefghijklmnopqrstuvwxyz0123456789@#$?";
 
     var pass = "";
 
@@ -42,13 +42,17 @@ function generatePasswordRand(newPassword) {
 }
 
 function esFuerte() {
-    var expreg = /^[A-Z]{2,}\s[a-z]{1,}\s\d{3,}$/;
+    var mayus = new RegExp("^(?=.*[A.Z]{2, })");
+    var lower = new RegExp("^(?=.*[a-z]{2, })");
+    var numbers = new RegExp("^(?=.*[0-9]{2, })");
 
-    if (expreg.test()) {
-        alert("El password es seguro");
-    } else {
-        alert("El password no es seguro");
-    }
-}
+    generate.on("keyup", function(){
+        var pass = spanGenerar.val();
 
-console.log()
+        if (mayus.test(pass) && lower.test(pass) && numbers.test(pass)) {
+            spanValidar.text("Segura");
+        } else {
+            spanValidar.text("Insegura");
+        }
+    });
+};
