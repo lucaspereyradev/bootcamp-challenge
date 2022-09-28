@@ -1,5 +1,5 @@
-#Estructura de Datos(Arbol)
-##Lucas Samuel Pereyra
+# Estructura de Datos(Arbol)
+## Lucas Samuel Pereyra
 
 1. Nodo A.
 2. Son 7: ABFG, BFGH, ACJK, CJKL, CJKM, AENP, AENQ
@@ -18,6 +18,6 @@
 15. A la izquierda: BFGHI, a la derecha: DENPQ.
 16. Tiene 4 hijos: BCDE.
 17. Los nodos padre en preorden, postorden e inorden son:
-    *Preorden: ABFGHCIJKLMDENPQ.
-    *Postorden: HGFBILMKJCDPQNEA.
-    *Inorden: HGFBAICLKMJDPNQE.
+    * Preorden: ABFGHCIJKLMDENPQ.
+    * Postorden: HGFBILMKJCDPQNEA.
+    * Inorden: HGFBAICLKMJDPNQE.
